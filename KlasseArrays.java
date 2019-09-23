@@ -1,74 +1,60 @@
 import java.util.Arrays;
-import java.util.Random;
 
 public class KlasseArrays {
 	public static void main(String[] args) {
-		int searchItem = 12;
-		int size = 100;
-		int randRange = 100;
+          /*
+           * FORMÅL: Øve arrays
+           *
+           * OPGAVE:
+           * Benyt samme teknik som i Thinkjava afsnit 7.7
+           *
+           * skriv en metode - uniqueArr - som har følgende signatur:
+           * public static void uniqueArr(int[] myArr, int[] myRetValArr){
+           * myArr er et array fyldt med tilfældige heltal i en given range
+           * Metoden skal tælle hyppigheden af de enkelte tal i rangen og printe
+           * et histogram som vist nedenfor
+           *
+           * TESTKØRSEL:
+           * Metoden skal printe flg:
+           
+           
+              0:*
+              1:*********
+              2:******
+              3:****
+              4:*******
+              5:**
+              6:***
+              7:*
+              8:******
+           
+           * for dette array
+           * [3, 5, 2, 1, 4, 1, 1, 5, 2, 1, 2, 8, 8, 1, 7, 8, 6, 1, 8, 1, 4, 6, 4, 
+           * 1, 1, 3, 4, 8, 2, 2, 3, 4, 3, 4, 6, 2, 0, 4, 8, 7]
+           *
+           * 
+           */
+		int size = 40;
+		int randRange = 9;
 		int[] myArr = new int[size];
-		System.out.println(Arrays.toString(myArr));
-		doMod(myArr,randRange);
-		System.out.println(Arrays.toString(myArr));
-		int isInArr=searchInArr(myArr,searchItem);
-		if (isInArr > 0) {
-			System.out.println(searchItem + " is in array " + isInArr);
-		} else {
-			System.out.println(searchItem + " is not in array");
-		}
-
-		int[] myArr1 = new int[size];
-		int[] myArr2 = new int[size];
-		doMod(myArr1,randRange);
-		doMod(myArr2,randRange);
-		boolean isEqual = isEqualArrays(myArr1, myArr2);
+		ArrayHelper.fillWithRand(myArr,randRange);
+		int[] myRetArr = new int[randRange+1];
+		uniqueArr(myArr,myRetArr);
 		
 	}
-	public static int searchInArr(int[] myArr, int searchVal){
-		//boolean retValBool=false;
-		int retValCount=0;
-		
-		// lav en tæller
-		for (int i = 0; i<myArr.length;i++){
-			if(myArr[i] == searchVal) {
-				// tæl én op hver gang
-				///retValBool = true;
-				retValCount++;
+	public static void uniqueArr(int[] myArr, int[] myRetValArr){
+		for (int i=0;i<myArr.length-1;i++) {
+			int idx=myArr[i];
+			myRetValArr[idx]++;
+		}
+		System.out.println(Arrays.toString(myRetValArr));
+		for (int i=0;i<myRetValArr.length-1;i++) {
+		String myC ="*";
+		String myS ="";
+			for (int j=0;j<myRetValArr[i];j++) {
+				myS = myS + myC;
 			}
-		}
-		// returner tæller
-		//return retValBool;
-		return retValCount;
-	}
-
-	public static boolean isEqualArrays(int[] myArr1, int[] myArr2){
-		boolean retValBool = true;
-		if (myArr1.length != myArr2.length)  {
-			retValBool=false;
-                        return retValBool;
-		}
-		for (int i = 0;i<myArr1.length;i++) {
-			if (myArr1[i] != myArr2[i]) {
-				retValBool = false;
-				return retValBool;
-			}
-
-		}
-		return retValBool;
-	}
-	
-	public static void doMod(int[] myLocalArr, int randRange){
-		Random myRand = new Random();
-		for (int i = 0;i < myLocalArr.length;i++) {
-			int randInt = myRand.nextInt(randRange)+1;
-			myLocalArr[i]=randInt;
+			System.out.printf("%d:%s%n",i,myS);
 		}
 	}
-	public static void doMod2(int[] myLocalArr, int val){
-		myLocalArr[10]=123;
-		val = 21;
-		System.out.println(val);
-		
-	}
-	
 }

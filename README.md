@@ -1,6 +1,6 @@
 # Opgaver til uge 39 
 ### Rækkefølgen 
 
-1) OrderFlowers
+1) KlasseArrays og ArraysHelper
 
-2) Hands on Arrays
+2) KlasseArrays og uniqeArr-metoden
