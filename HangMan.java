@@ -1,4 +1,3 @@
-package numberguess;
 /*
 * FORMÅL:
 * At læse en større programstump og kunne tilpasse den
