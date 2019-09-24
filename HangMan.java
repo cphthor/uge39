@@ -15,13 +15,13 @@
 */
 public class HangMan {
 	public static void main(String[] args) {
-		String secretWord = ArrayHelper.getSecretWord();
+		String secretWord = ArrayHelperHangMan.getSecretWord();
 		System.out.println(secretWord);
 		System.out.println(secretWord.length());
 		int counter = 0;
 		char[] myWord= new char[secretWord.length()];
 		while (counter < 8) {
-			char userChar = ArrayHelper.getUserChar();
+			char userChar = ArrayHelperHangMan.getUserChar();
 			int idx = secretWord.indexOf(userChar);
 			if (idx >= 0) {
 				System.out.println("is found at " + idx);
