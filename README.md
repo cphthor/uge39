@@ -7,3 +7,5 @@
 
 3) Hangman
 - kan I færdiggøre mit hangman-projekt?
+
+4) Yatzy - en begyndelse
