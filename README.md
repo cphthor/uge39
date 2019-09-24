@@ -6,6 +6,7 @@
 2) KlasseArrays og uniqeArr-metoden
 
 3) Hangman
-- kan I færdiggøre mit hangman-projekt?
+- kan I færdiggøre dette hangman-projekt?
 
 4) Yatzy - en begyndelse
+- Die, DieCup og YatzyGame
