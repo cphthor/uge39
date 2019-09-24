@@ -1,9 +1,9 @@
 # Opgaver til uge 39 
 ### Rækkefølgen 
 
-1) KlasseArrays og ArraysHelper
+1) Arrays og ArraysHelper
 
-2) KlasseArrays og uniqeArr-metoden
+2) Arrays og uniqeArr-metoden
 
 3) Hangman
 - kan I færdiggøre dette hangman-projekt?
