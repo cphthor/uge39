@@ -1,6 +1,8 @@
 # Opgaver til uge 39 
 ### Rækkefølgen 
 
+0) DoggKennel og Dogg
+
 1) CharHistogram og ArraysHelper
 
 2) Hangman
