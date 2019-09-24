@@ -1,13 +1,18 @@
 import java.util.Arrays;
 
-public class KlasseArrays {
+public class CharHistogram {
 	public static void main(String[] args) {
           /*
            * FORMÅL: Øve arrays
            *
            * OPGAVE:
-           * Benyt samme teknik som i Thinkjava afsnit 7.7
+           * Der er to opgaver
+           * 1)Skriv hjælperklassen fillWithRand i ArrayHelper.java
            *
+           * 2)Benyt samme teknik som i Thinkjava afsnit 7.7 til at lave et
+           * histogram over forekomsten af tal i det array som fillWithRand laver.
+           *
+           * Fremgangsmåde:
            * skriv en metode - uniqueArr - som har følgende signatur:
            * public static void uniqueArr(int[] myArr, int[] myRetValArr){
            * myArr er et array fyldt med tilfældige heltal i en given range
