@@ -13,7 +13,13 @@ public class ArrayHelperHangMan {
       "Det og meget mere kan du finde svar på i denne artikel.";
     String[] myArr = myLongString.split(" ");
     System.out.println(Arrays.toString(myArr));
-    return myArr[myRand.nextInt(myArr.length-1)];
+    //Improved returncheck
+    String myString = "";
+    while (myString.length() < 3) {
+      myString = myArr[myRand.nextInt(myArr.length-1)];
+    }
+    return myString;
+    //return myArr[myRand.nextInt(myArr.length-1)];
   }
   public static char getUserChar() { 
     Scanner myScan = new Scanner(System.in);
