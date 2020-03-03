@@ -13,7 +13,7 @@ public class ArrayHelperHangMan {
       "Det og meget mere kan du finde svar på i denne artikel.";
     String[] myArr = myLongString.split(" ");
     System.out.println(Arrays.toString(myArr));
-    //Improved returncheck
+    //Improved returncheck removing small words
     String myString = "";
     while (myString.length() < 3) {
       myString = myArr[myRand.nextInt(myArr.length-1)];

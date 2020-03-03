@@ -52,7 +52,7 @@ public class DoggKennel {
 		}
 		System.out.println(Arrays.toString(myOff));
 		// print ejeren
-		System.out.println("miin hhund er ejet af " + myDog.getOwner());
+		System.out.println("min hund er ejet af " + myDog.getOwner());
 		// TODO: fodr hunden når hundeklassen er modificeret så den kan fodres
 		String resString = myDog.feedDog();
 		System.out.println(resString);

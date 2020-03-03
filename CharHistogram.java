@@ -39,21 +39,29 @@ public class CharHistogram {
            *
            * 
            */
+
+		boolean test = true;
+                // test = false;
 		int size = 40;
 		int randRange = 9;
 		int[] myArr = new int[size];
+		int[] myRetArr = new int[randRange];
+                if (test) {
+                  myArr = new int[] {3, 5, 2, 1, 4, 1, 1, 5, 2, 1, 2, 8, 8, 1, 7, 8, 6, 1, 8, 1, 4, 6, 4, 1, 1, 3, 4, 8, 2, 2, 3, 4, 3, 4, 6, 2, 0, 4, 8, 7};
+                } else {
 		ArrayHelper.fillWithRand(myArr,randRange);
-		int[] myRetArr = new int[randRange+1];
+                }
 		uniqueArr(myArr,myRetArr);
 		
 	}
 	public static void uniqueArr(int[] myArr, int[] myRetValArr){
-		for (int i=0;i<myArr.length-1;i++) {
+		System.out.println("ARRAY: " +Arrays.toString(myArr));
+
+		for (int i=0;i<myArr.length;i++) {
 			int idx=myArr[i];
 			myRetValArr[idx]++;
 		}
-		System.out.println(Arrays.toString(myRetValArr));
-		for (int i=0;i<myRetValArr.length-1;i++) {
+		for (int i=0;i<myRetValArr.length;i++) {
 		String myC ="*";
 		String myS ="";
 			for (int j=0;j<myRetValArr[i];j++) {
